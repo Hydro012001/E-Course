@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.parent  {
+  width: 500px;
+  height: 200px;
+ display: flex;
+ overflow: hidden;
+ border: 5px solid black;
+ justify-content: center;
+ align-items: center;
+ 
+}
+
+.parent div{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    animation-name: example;
+    animation-duration: 2s;
+    margin: 0px 20px 0px 0px;
+    opacity: 0%;
+   
+}
+
+.parent div > *:nth-child(1) {animation-delay: 0s; background-color: purple;}
+
+.parent div > *:nth-child(3) {animation-delay: 8s; background-color: green;}
+
+
+@keyframes example {
+  0%   {opacity: 100%;}
+ 
+  100%  {opacity: 0%;}
+ 
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Animation</h1>
+
+<p>The animation-direction property specifies whether an animation should be played forwards, backwards or in alternate cycles. The following example will run the animation in reverse direction (backwards):</p>
+
+<div class="parent">
+    <div>
+        <h1>CHild 1</h1>
+    </div>
+    <br>
+    <div><h1>CHild 2</h1></div>
+    <br>
+    <div><h1>CHild 3</h1></div>
+    <br>
+    <div><h1>CHild 4</h1></div>
+    <br>
+    <div><h1>CHild 5</h1></div>
+    <br>
+</div>
+</body>
+</html>
+
+
